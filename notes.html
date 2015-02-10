@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SCIENCE!</title>
+</head>
+<body>
+<label for='stockInp'>Stock To Hear (Symbol): </label><input type=text name='stockInp' id='stockInp'/><br/><button onclick='getStockData(1);'>Get Melody Stock Data</button>
+<hr/>
+<label for='stockTInp'>Stock To Hear (Symbol): </label><input type=text name='stockTInp' id='stockTInp'/><br/><button onclick='getStockData(0);'>Get Tempo Stock Data</button>
+<br/>
+<button onclick='playData();'>Play!</button>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="timbre.js"></script>
+<script src='notes.js'></script>
+</body>
+</html>
