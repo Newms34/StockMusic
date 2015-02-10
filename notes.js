@@ -64,11 +64,11 @@ function Note(oneFreq, oneTime){
 	//oneTime = note duration
 	var sine1 = T("sin", {freq:oneFreq, mul:0.5});
 	T("perc", {r:oneTime}, sine1).on("ended", function() {
-	this.pause();
+	this.pause(alert('meh'));
 	}).bang().play();
 	currNote++
 	if (currNote<freqs.length){
-		timer = setTimeout(function(){Note(freqs[currNote],tempo[currNote])},300);
+		timer = setTimeout(function(){Note(freqs[currNote],tempo[currNote])},200);
 	}
 }
 /*we end up with a list of values from 0 - around 3 or 400 something
@@ -85,5 +85,7 @@ we'll also need to graph the input vals (0-350?) to piano arrays.
 EQUATION:
 
 var currFreq = Math.floor((0.0000008379*Math.pow(stockPrice,4)) - (0.000346*Math.pow(stockPrice,3)) + (.057*Math.pow(stockPrice,2)) + (2.518*stockPrice)+61.112)
+TO DO:
+Standardize results from BOTH data sources so we have middled values.
 */
 
